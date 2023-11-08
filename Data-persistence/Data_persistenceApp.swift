@@ -9,10 +9,9 @@ import SwiftUI
 
 @main
 struct Data_persistenceApp: App {
-    @State private var darkmode = UserDefaults.standard.bool(forKey: "Toggle")
     var body: some Scene {
         WindowGroup {
-            ContentView() .preferredColorScheme(darkmode ? .dark : .light)
+            ContentView(coreDM: CoreDataManager())
         }
     }
 }
